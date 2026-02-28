@@ -284,3 +284,30 @@ section {
 }
 */
 
+/* =========================
+   Cuadrícula 3×3 centrada
+   ========================= */
+.center-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* ocupa casi toda la altura disponible (ajusta si el header cambia) */
+    min-height: calc(100vh - 80px);
+}
+
+.grid-3x3 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;      /* tamaño fijo o modificar con max-width/percent
+                           para responsividad */
+    height: 300px;
+    gap: 10px; /* espacio entre celdas */
+}
+
+.grid-3x3 .cell {
+    flex: 0 0 calc(33.333% - 10px);
+    height: calc(33.333% - 10px);
+    background: var(--light-color);
+    border: 1px solid var(--secondary-color);
+}
+

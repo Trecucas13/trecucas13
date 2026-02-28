@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Contacto</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/index.css'>
+    <link rel="icon" type="image/png" href="../assets/img/icon.png" />
+    <script src='main.js'></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h1>Andres Felipe López</h1>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Acerca de mí</a></li>
+                    <li><a href="#">Tecnologias</a></li>
+                    <li><a href="#">Proyectos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+        </nav>
+    </header>
+
+     <!-- contenedor que centra la cuadrícula -->
+ <main class="center-grid">
+    <div class="grid-3x2">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>
+</main>
+
+    <style>
+        /* contenedor que ocupa el espacio restante y centra su contenido */
+.center-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* si quieres que ocupe toda la altura disponible menos el header: */
+    min-height: calc(100vh - 80px); /* ajusta según el alto del header */
+}
+
+/* la “cuadrícula” de 3×3: flex que envuelve y establece tamaño fijo */
+.grid-3x2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 320px;          /* 3×(100px ancho celda) + gap */
+    gap: 10px;
+}
+
+.grid-3x2 .cell {
+    flex: 0 0 calc(33.333% - 10px);
+    height: 100px;         /* o el alto que quieras */
+    background: var(--light-color);
+    border: 1px solid var(--secondary-color);
+}
+        
+    </style>
+    
+</body>
+</html>
