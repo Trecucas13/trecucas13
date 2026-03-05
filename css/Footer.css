@@ -7,10 +7,16 @@ footer {
     background-color: var(--dark-color);
     color: var(--footer-text);
     text-align: center;
-    padding: var(--spacing);
+    padding: 0.5rem 1rem; /* smaller padding */
     margin-top: 2rem;
-    font-size: 0.9rem;
+    font-size: 0.5rem;
+    width: 100%;
+    position: fixed;          /* keep footer always visible */
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
 }
+
 footer p {
     margin-bottom: 1rem;
     opacity: 0.8;
